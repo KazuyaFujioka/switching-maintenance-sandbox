@@ -1,6 +1,6 @@
 package com.example.switching.maintenance._configuration.maintenance;
 
-import org.springframework.web.filter.OncePerRequestFilter;
+import javax.servlet.Filter;
 
-public abstract class MaintenanceFilter extends OncePerRequestFilter {
+public interface MaintenanceFilter extends Filter {
 }

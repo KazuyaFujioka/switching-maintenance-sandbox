@@ -2,6 +2,7 @@ package com.example.switching.maintenance._configuration.maintenance;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +11,7 @@ import java.io.IOException;
 
 @Profile("maintenance")
 @Component
-class UnderMaintenanceFilter extends MaintenanceFilter {
+class UnderMaintenanceFilter extends OncePerRequestFilter implements MaintenanceFilter  {
 
     MaintenanceMatching matching;
 
